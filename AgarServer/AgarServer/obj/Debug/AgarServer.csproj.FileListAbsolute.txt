@@ -1,0 +1,76 @@
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\csc.exe
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\System.Collections.Immutable.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\vbc.exe
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\VBCSCompiler.exe
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\roslyn\VBCSCompiler.exe.config
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\AgarServer.dll.config
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\AgarServer.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\AgarServer.pdb
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.AspNet.SignalR.Core.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.Owin.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.Owin.Host.SystemWeb.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.Owin.Security.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.Web.Infrastructure.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Newtonsoft.Json.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Owin.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.AspNet.SignalR.Core.xml
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.Owin.xml
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.Owin.Host.SystemWeb.xml
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.Owin.Security.xml
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Newtonsoft.Json.xml
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\obj\Debug\AgarServer.csprojResolveAssemblyReference.cache
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\obj\Debug\AgarServer.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\obj\Debug\AgarServer.pdb
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.Owin.Cors.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\System.Web.Cors.dll
+c:\users\viktor\documents\visual studio 2015\Projects\AgarServer\AgarServer\bin\Microsoft.Owin.Cors.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\csc.exe
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\vbc.exe
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\VBCSCompiler.exe
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\AgarServer.dll.config
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\AgarServer.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\AgarServer.pdb
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.Owin.Cors.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.Owin.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.Owin.Security.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Newtonsoft.Json.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Ninject.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Owin.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\System.Web.Cors.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.Owin.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.Owin.Cors.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Microsoft.Owin.Security.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Newtonsoft.Json.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\bin\Ninject.xml
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\obj\Debug\AgarServer.csprojResolveAssemblyReference.cache
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\obj\Debug\AgarServer.dll
+C:\Users\Viktor\Desktop\Agar\AgarServer\AgarServer\obj\Debug\AgarServer.pdb
