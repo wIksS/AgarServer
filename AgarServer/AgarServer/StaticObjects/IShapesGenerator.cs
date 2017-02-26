@@ -5,14 +5,14 @@ using System.Web;
 
 namespace AgarServer
 {
-    public interface IShapesGenerator 
+    public interface IShapesGenerator<T> 
     {
         void GenerateShapes();
 
-        void AddShape();
+        T AddShape();
 
         void RemoveShape(int id);
 
-        IEnumerable<StaticShape> GetAllShapes();
+        IEnumerable<T> GetAllShapes();
     }
 }

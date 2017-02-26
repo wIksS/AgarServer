@@ -25,8 +25,15 @@ namespace AgarServer
             var player = GameEngine.Instance.RemovePlayer(id);
             if (player != null)
             {
-                PlayerHub.broadcasters[player.Id].Terminate();
-                PlayerHub.broadcasters.Remove(player.Id);
+                if (PlayerHub.broadcasters["groupid"].GetPlayerCount() == 0)
+                {
+                    PlayerHub.broadcasters["groupid"].Terminate();
+                    PlayerHub.broadcasters.Remove("groupid");
+                }
+                else
+                {
+                    PlayerHub.broadcasters["groupid"].RemovePlayer(player);
+                }
 
                 context.Clients.All.removePlayer(player);
             }
@@ -34,9 +41,9 @@ namespace AgarServer
 
         public void UpdatePlayer(PlayerInput input)
         {
-            if (PlayerHub.broadcasters.ContainsKey(input.Id))
+            if (PlayerHub.broadcasters.ContainsKey("groupid"))
             {
-                PlayerHub.broadcasters[input.Id].MousePosition = input.MousePosition;
+                PlayerHub.broadcasters["groupid"].ChangePlayerMousePosition(GameEngine.Instance.GetPlayer(input.Id),input.MousePosition);
             }
         }
 
@@ -52,7 +59,12 @@ namespace AgarServer
 
             IPlayerColliser colliser = NinjectObjectFactory.GetObject<IPlayerColliser>();
             IShapesColliser shapesColliser = NinjectObjectFactory.GetObject<IShapesColliser>();
-            PlayerHub.broadcasters.Add(player.Id, new Broadcaster(colliser, shapesColliser,player, new Position(0, 0)));
+            if (!PlayerHub.broadcasters.ContainsKey("groupid"))
+            {
+                PlayerHub.broadcasters.Add("groupid", new Broadcaster(colliser, shapesColliser, new Position(0, 0)));
+            }
+
+            PlayerHub.broadcasters["groupid"].AddPlayer(player);
         }
     }
 }

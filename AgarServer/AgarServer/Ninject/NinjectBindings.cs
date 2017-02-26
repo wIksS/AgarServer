@@ -13,7 +13,7 @@ namespace AgarServer
         {
             Bind<IColorGenerator>().To<ColorGenerator>();
             Bind<IPlayerColliser>().To<CircleColliser>();
-            Bind<IShapesGenerator>().To<StaticShapesGenerator>();
+            Bind<IShapesGenerator<StaticShape>>().To<StaticShapesGenerator>();
             Bind<IShapesColliser>().To<ShapesColliser>();
         }
     }

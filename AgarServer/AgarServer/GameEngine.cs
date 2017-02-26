@@ -16,7 +16,7 @@ namespace AgarServer
         private IColorGenerator colorGenerator;
 
         [Inject]
-        private GameEngine(IColorGenerator colorGenerator, IShapesGenerator generator)
+        private GameEngine(IColorGenerator colorGenerator, IShapesGenerator<StaticShape> generator)
         {
             this.ShapesGenerator = generator;
             this.random = new Random();
@@ -25,7 +25,7 @@ namespace AgarServer
             generator.GenerateShapes();
         }
 
-        public IShapesGenerator ShapesGenerator{ get; set; }
+        public IShapesGenerator<StaticShape> ShapesGenerator{ get; set; }
 
         public static GameEngine Instance
         {
@@ -33,7 +33,7 @@ namespace AgarServer
             {
                 if (instance == null)
                 {
-                    instance = new GameEngine(NinjectObjectFactory.GetObject<IColorGenerator>(), NinjectObjectFactory.GetObject<IShapesGenerator>());
+                    instance = new GameEngine(NinjectObjectFactory.GetObject<IColorGenerator>(), NinjectObjectFactory.GetObject<IShapesGenerator<StaticShape>>());
                 }
 
                 return instance;
@@ -78,7 +78,12 @@ namespace AgarServer
 
         public Player GetPlayer(string id)
         {
-            return this.players[id];
+            if (this.players.ContainsKey(id))
+            {
+                return this.players[id];
+            }
+
+            return null;
         }
 
         public Player RemovePlayer(string id)

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace AgarServer
 {
-    public class StaticShapesGenerator : IShapesGenerator
+    public class StaticShapesGenerator : IShapesGenerator<StaticShape>
     {
         private Dictionary<int, StaticShape> staticShapes;
         private int idCounter = 0;
@@ -28,12 +28,15 @@ namespace AgarServer
             }
         }
 
-        public void AddShape()
+        public StaticShape AddShape()
         {
-            this.staticShapes.Add(idCounter, new StaticShape(idCounter,
+            var shape = new StaticShape(idCounter,
                 Position.GetRandomPosition(random, GlobalConstants.GameHeight, GlobalConstants.GameWidth),
-                GlobalConstants.InitialStaticCirclesRadius, colorGenerator.GetColor()));
+                GlobalConstants.InitialStaticCirclesRadius, colorGenerator.GetColor());
+
+            this.staticShapes.Add(idCounter,shape);
             idCounter++;
+            return shape;
         }
 
         public void RemoveShape(int id)
