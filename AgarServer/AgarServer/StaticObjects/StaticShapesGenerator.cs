@@ -34,7 +34,16 @@ namespace AgarServer
                 Position.GetRandomPosition(random, GlobalConstants.GameHeight, GlobalConstants.GameWidth),
                 GlobalConstants.InitialStaticCirclesRadius, colorGenerator.GetColor());
 
-            this.staticShapes.Add(idCounter,shape);
+            this.staticShapes.Add(idCounter, shape);
+            idCounter++;
+            return shape;
+        }
+
+        public StaticShape AddShape(StaticShape shape)
+        {
+            shape.Id = idCounter;
+
+            this.staticShapes.Add(idCounter, shape);
             idCounter++;
             return shape;
         }

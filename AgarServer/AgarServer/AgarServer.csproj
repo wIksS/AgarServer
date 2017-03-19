@@ -137,6 +137,7 @@
     <Compile Include="Common\ColorGenerator.cs" />
     <Compile Include="Common\Movement.cs" />
     <Compile Include="Collision\IPlayerColliser.cs" />
+    <Compile Include="Common\Velocity.cs" />
     <Compile Include="Ninject\NinjectObjectFactory.cs" />
     <Compile Include="Ninject\NinjectBindings.cs" />
     <Compile Include="Player.cs" />
@@ -147,6 +148,7 @@
     <Compile Include="GameEngine.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="StaticObjects\IShapesGenerator.cs" />
+    <Compile Include="StaticObjects\MovingShape.cs" />
     <Compile Include="StaticObjects\StaticShape.cs" />
     <Compile Include="StaticObjects\StaticShapesGenerator.cs" />
   </ItemGroup>

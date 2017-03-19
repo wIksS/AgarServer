@@ -11,6 +11,8 @@ namespace AgarServer
 
         T AddShape();
 
+        T AddShape(T shape);
+
         void RemoveShape(int id);
 
         IEnumerable<T> GetAllShapes();

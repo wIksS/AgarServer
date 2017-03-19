@@ -9,14 +9,13 @@ namespace AgarServer
     {
         private const int moveCount = 1;
 
-         public static Position GetNewPosition(Position playerPosition, Position inputPosition)
+         public static Position GetNewPosition(Position playerPosition, Position inputPosition, double speed= 700, bool checkArrival = true)
         {
             if (playerPosition.Top == inputPosition.Top && playerPosition.Left == inputPosition.Left)
             {
                 return inputPosition;
             }
 
-            double speed = 700;
             double elapsed = 0.01f;
 
             double distance = Math.Sqrt(
@@ -26,15 +25,13 @@ namespace AgarServer
             double directionY = (inputPosition.Top - playerPosition.Top) / distance;
 
             Position newPosition = new Position(playerPosition.Top, playerPosition.Left);
+            bool moving = true;            
 
-            bool moving = true;
-
-            
             if (moving == true)
             {
                 newPosition.Left += directionX * speed * elapsed;
                 newPosition.Top += directionY * speed * elapsed;
-                if (Math.Sqrt((newPosition.Left - playerPosition.Left) * (newPosition.Left - playerPosition.Left)
+                if (checkArrival && Math.Sqrt((newPosition.Left - playerPosition.Left) * (newPosition.Left - playerPosition.Left)
                    + (newPosition.Top - playerPosition.Top) * (newPosition.Top - playerPosition.Top)) >= distance)
                 {
                     newPosition.Left = inputPosition.Left;

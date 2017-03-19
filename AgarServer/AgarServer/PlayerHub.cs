@@ -20,7 +20,7 @@ namespace AgarServer
             return base.OnDisconnected(stopCalled);
         }
 
-        public static void RemovePlayer(IHubContext context, string id)
+        public static async Task RemovePlayer(IHubContext context, string id)
         {
             var player = GameEngine.Instance.RemovePlayer(id);
             if (player != null)
@@ -43,7 +43,15 @@ namespace AgarServer
         {
             if (PlayerHub.broadcasters.ContainsKey("groupid"))
             {
-                PlayerHub.broadcasters["groupid"].ChangePlayerMousePosition(GameEngine.Instance.GetPlayer(input.Id),input.MousePosition);
+                PlayerHub.broadcasters["groupid"].ChangePlayerMousePosition(GameEngine.Instance.GetPlayer(input.Id), input.MousePosition);
+            }
+        }
+
+        public void SplitPlayer(string id)
+        {
+            if (PlayerHub.broadcasters.ContainsKey("groupid"))
+            {
+                PlayerHub.broadcasters["groupid"].SplitPlayer(GameEngine.Instance.GetPlayer(id));
             }
         }
 

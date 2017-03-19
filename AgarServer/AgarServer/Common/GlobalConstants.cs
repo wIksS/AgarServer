@@ -15,10 +15,18 @@ namespace AgarServer.Common
 
         public static readonly int InitialStaticCirclesRadius = 8;
 
-        public static readonly int InitialShapesCount = 340;
+        public static readonly int InitialShapesCount = 200;
 
         public static readonly int UpdatesPerSecond = 15;
 
         public static readonly int UpdateRadius = 15;
+
+        public static readonly int UpdateShapesRadius = 8;
+
+        public static readonly int MovingShapesRadius = 20;
+
+        public static readonly double InitialMovingShapeSpeed = 2600;
+
+        public static readonly int MovingShapeGravity = 135;
     }
 }

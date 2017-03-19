@@ -1,4 +1,5 @@
 ﻿using AgarServer.Common;
+using AgarServer.StaticObjects;
 using Microsoft.AspNet.SignalR;
 using System;
 using System.Collections.Generic;
@@ -17,10 +18,12 @@ namespace AgarServer
         private CancellationToken ct;
         private IPlayerColliser colliser;
         private IShapesColliser shapesCollsier;
+        private List<MovingShape> MovingShapes;
         private static readonly object lockObject = new object();
 
         public Broadcaster(IPlayerColliser colliser, IShapesColliser shapeColliser, Position mousePosition)
         {
+            this.MovingShapes = new List<MovingShape>();
             this.shapesCollsier = shapeColliser;
             this.colliser = colliser;
             this.players = new Dictionary<string, KeyValuePair<Player, Position>>();
@@ -55,12 +58,37 @@ namespace AgarServer
 
                         context.Clients.All.updatePlayer(player);
 
+                        MoveMovingShapes();
                         PerformCollision(player);
                         PerformShapesCollision(player);
                     }
                 }
 
                 Thread.Sleep(1000 / GlobalConstants.UpdatesPerSecond);
+            }
+        }
+
+        private void MoveMovingShapes()
+        {
+            for (int i = 0; i < MovingShapes.Count; i++)
+            {
+                var position = Movement.GetNewPosition(
+                        Position.GetCircleCenter(MovingShapes[i].Position, MovingShapes[i].Radius),
+                        MovingShapes[i].Velocity.Direction,
+                        MovingShapes[i].Velocity.Speed);
+
+                position.Top -= MovingShapes[i].Radius;
+                position.Left -= MovingShapes[i].Radius;
+
+                MovingShapes[i].Velocity.Speed -= GlobalConstants.MovingShapeGravity;
+                if (MovingShapes[i].Velocity.Speed < 0)
+                {
+                    MovingShapes.Remove(MovingShapes[i]);
+                    continue;
+                }
+
+                MovingShapes[i].Position = position;
+                this.context.Clients.All.updateShape(MovingShapes[i]);
             }
         }
 
@@ -77,6 +105,32 @@ namespace AgarServer
             lock (lockObject)
             {
                 this.players[player.Id] = new KeyValuePair<Player, Position>(player, position);
+            }
+        }
+
+        public void SplitPlayer(Player player)
+        {
+            if (this.players.ContainsKey(player.Id) && player.Radius > 20)
+            {
+                player.Radius -= GlobalConstants.MovingShapesRadius / GlobalConstants.UpdateShapesRadius;
+                context.Clients.All.changePlayerRadius(player);
+
+                var shape = new MovingShape(-1, new Position(0, 0), GlobalConstants.MovingShapesRadius, player.Color);
+                shape = GameEngine.Instance.ShapesGenerator.AddShape(shape) as MovingShape;
+                shape.Velocity = new Velocity(
+                   Movement.GetNewPosition(Position.GetCircleCenter(player.Position, player.Radius),
+                   this.players[player.Id].Value,
+                   50000 / 0.01, false));
+
+                var center = Position.GetCircleCenter(player.Position, player.Radius);
+                center = new Position(center.Top - 18, center.Left - 18);
+                shape.Position = Movement.GetNewPosition(
+                    center,
+                    this.players[player.Id].Value,
+                    (player.Radius + 10) / 0.01, false);
+
+                this.MovingShapes.Add(shape);
+                this.context.Clients.All.spawnShape(shape);
             }
         }
 
@@ -106,13 +160,13 @@ namespace AgarServer
                 if (collisedPlayer.Radius > player.Radius)
                 {
                     Task.Run(() => PlayerHub.RemovePlayer(context, player.Id));
-                    collisedPlayer.Radius += player.Radius / GlobalConstants.UpdateRadius;
+                    collisedPlayer.Radius += player.Radius / GlobalConstants.UpdateShapesRadius;
                     context.Clients.All.changePlayerRadius(collisedPlayer);
                 }
                 else
                 {
                     Task.Run(() => PlayerHub.RemovePlayer(context, collisedPlayer.Id));
-                    player.Radius += collisedPlayer.Radius / GlobalConstants.UpdateRadius;
+                    player.Radius += collisedPlayer.Radius / GlobalConstants.UpdateShapesRadius;
                     context.Clients.All.changePlayerRadius(player);
                 }
             }

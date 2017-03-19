@@ -26,6 +26,6 @@ namespace AgarServer
         public double Radius { get; set; }
 
         [JsonProperty("color")]
-        public string Color { get; set; }
+        public string Color { get; set; }        
     }
 }
